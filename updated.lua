@@ -12,11 +12,11 @@ function debug:newValue(identifier, value)
 	local textLabel = ui.TextLabel:Clone()
 	textLabel.Parent = debugUI.Frame
 	textLabel.Name = identifier
-	textLabel.Text = identifier..": "..value
+	textLabel.Text = identifier..": "..tostring(value)
 end
 
 function debug:updateValue(identifier, value)
-	debugUI.Frame[identifier].Text = identifier..": "..value
+	debugUI.Frame[identifier].Text = identifier..": "..tostring(value)
 end
 
 function debug:Destroy()
